@@ -1,0 +1,287 @@
+{%extends 'base.html'%}
+
+{%block head%}
+<link href="../static/css/main.css" rel="stylesheet">
+{%endblock%}
+
+{%block body%}
+<div class="container">
+    <div class="row g-3">
+        <div class="p-3">
+        <h1>Recommendation Models</h1>
+            <!--p>Here you can choose among 3 different loading strategies, 8 prefiltering approaches and several
+            splitting strategies</p-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+                <div class="row p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="loading_rec_model"><h2>Select Recommendation Models</h2></label>
+                            <select name="loading_rec_model" id="loading_rec_model" class="form-control" required>
+                                <option disabled selected value="null">--- select one ---</option>
+                                {% for data1 in  data %}
+                                  <option value='{{data1.id}}'>{{data1.id}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            <form action="/api/v1/recommendationmodel" method="POST" enctype="multipart/form-data" id="form_data" name="form_data"
+                  class="main-form needs-validation">
+
+                <!--div class="input-group p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="upload_file"><h2>Upload File</h2></label>
+                            <input type="file" id="upload_file" name="upload_file" class="form-control" required>
+                        </div>
+                    </div>
+                </div-->
+
+                <!--div class="row p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="loading_rec_model"><h2>Select Recommendation Models</h2></label>
+                            <select name="loading_rec_model" id="loading_rec_model" class="form-control" required>
+                                <option disabled selected value="null">--- select one ---</option>
+                                {% for data1 in  data %}
+                                  <option value='{{data1.id}}'>{{data1.id}}</option>
+                                {% endfor %}
+                                <option disabled selected value="null">--- select one ---</option>
+                                <option value="Unpersonalized Recommenders">Unpersonalized Recommenders</option>
+                                <option value="Algebric">Algebric</option>
+                                <option value="Autoencoders">Autoencoders</option>
+                            </select>
+                        </div>
+                    </div>
+                </div-->
+
+                <div class="row p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="loading_model"><h2>Select Models</h2></label>
+                            <select name="loading_model" id="loading_model" class="form-control" required>
+                                <!--option disabled selected value="null">--- select one ---</option>
+                                <option value="Most Popular">Most Popular</option>
+                                <option value="Random Recommender">Random Recommender</option-->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="train_file"><h2>Train File</h2></label>
+                            <input type="file" id="train_file" name="train_file" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group p-2">
+                    <div class="col-12">
+                        <div class="form-group p-3 border rounded-3">
+                            <label for="test_file"><h2>Test File</h2></label>
+                            <input type="file" id="test_file" name="test_file" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-2">
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Top_k</span>
+                            <input type="text" class="form-control" name="top_k" id="top_k" placeholder="value" aria-label="value" aria-describedby="value">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-2">
+                    <div class="col-12">
+                        <h2>Parameter and value</h2>
+                        <div class="row" name="parameters" id="parameters">
+                        <!--div class="input-group mb-3" name="parameters" id="parameters">
+                            <span class="input-group-text" id="parameter">Parameter's name</span>
+                            <input type="text" class="form-control" name="parameter" placeholder="value" aria-label="value" aria-describedby="value"-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-2">
+                    <div class="col-12">
+                        <h2>Meta Parameters</h2>
+                        <!--div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" name="verbose" id="verbose">
+                            <label class="form-check-label" for="verbose">
+                                Verbose
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" name="save_recs" id="save_recs">
+                            <label class="form-check-label" for="save_recs">
+                                Save Rec
+                            </label>
+                        </div-->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="true" name="save_weights" id="save_weights">
+                            <label class="form-check-label" for="save_weights">
+                                Save Weights
+                            </label>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="validation_metric">Validation Metric</span>
+                            <input type="text" class="form-control" name="validation_metric" placeholder="text" aria-label="value" aria-describedby="value">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="validation_rate">Validation Rate</span>
+                            <input type="number" class="form-control" name="validation_rate" placeholder="int" aria-label="value" aria-describedby="value">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="hyper_opt_alg">Hyper_opt_alg</span>
+                            <input type="text" class="form-control" name="hyper_opt_alg" placeholder="text" aria-label="value" aria-describedby="value">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="hyper_max_evals">Hyper_max_evals</span>
+                            <input type="text" class="form-control" name="hyper_max_evals" placeholder="text" aria-label="value" aria-describedby="value">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-auto p-2 text-end">
+                    <button type="button" class="btn btn-light mb-3 me-2">+ Add Model</button>
+                    <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="toast-container position-fixed bottom-0 end-0  p-3">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="processing-toast" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto">Processing...</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Data preprocessing in progress
+        </div>
+      </div>
+
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="success-toast" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto">Preprocessing completed</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="success-toast-body">
+            <p>Your dataset has been successfully processed!<p>
+            <a class="btn btn-secondary" id="success-button-download">Download ZIP</a>
+        </div>
+      </div>
+    </div>
+
+<!-- script fill second select -->
+<script>
+      $(document).ready(function(){
+        $("#loading_rec_model").change(function(){
+          let cate=$(this).val();
+          if (cate!=''){
+            $.ajax({
+              url:"{{url_for('getDataAjax')}}",
+              type:"POST",
+              data:{"data":cate},
+              success:function(res){
+                $("#loading_model").html(res);
+              }
+            });
+          }else{
+            $("#loading_model").html("");
+          }
+        });
+      });
+</script>
+
+<!-- script parameters -->
+<script>
+      $(document).ready(function(){
+        $("#loading_model").change(function(){
+          let model=$(this).val();
+          if (model!=''){
+            $.ajax({
+              url:"{{url_for('getParametersAjax')}}",
+              type:"POST",
+              data:{"data":model},
+              success:function(res){
+                $("#parameters").html(res);
+              }
+            });
+          }else{
+            $("#parameters").html("");
+          }
+        });
+      });
+</script>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+<script>
+    let form = document.querySelector('.needs-validation');
+
+    form.addEventListener('change', function(event){
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+
+    form.addEventListener('submit', function(event){
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            }
+        event.preventDefault();
+        form.classList.add('was-validated');
+        fetch('/api/v1/recommendationmodel-json', {
+            method: 'POST',
+            body: new FormData(form)
+        }).then(res => res.json())
+        .then(data => {
+            document.getElementById('success-button-download').setAttribute('href', `/api/v1/recommendationmodel/download/${data}`);
+            $("#processing-toast").toast('hide');
+            $("#success-toast").toast('show');
+        });
+        $("#processing-toast").toast('show');
+    })
+
+</script>
+
+<script src="../static/script/main.js"></script>
+<!--script src="../static/script/prefiltering_script.js"></script-->
+<!--script src="../static/script/test_splitting_script.js"></script-->
+<!--script src="../static/script/validation_splitting_script.js"></script-->
+{%endblock%}

@@ -1,0 +1,3 @@
+2022-11-07 15:58:38.447937: I C:\Users\anton\Documents\test\data\f23901dbe0fe6a33f40fa226855fb56a\train_dataset.tsv - Loaded
+2022-11-07 15:58:38.481813: I Test Fold 0
+2022-11-07 15:58:43.284475: I Statistics	Users:	1398	Items:	2476	Transactions:	13515	Sparsity:	0.9960955646307557

@@ -1,0 +1,6 @@
+2022-11-07 19:29:01.492137: I Loading parameters
+2022-11-07 19:29:01.493135: I Parameter random_seed set to 42
+2022-11-07 19:29:01.626803: I Finished
+2022-11-07 19:29:01.627800: I Writing recommendations at: C:\Users\anton\Documents\test\results\4562d4dca8070e28912d99587df9f77c
+2022-11-07 19:29:01.674674: I ******************************************
+2022-11-07 19:29:01.675653: W Saving weights FAILED. No model to save.

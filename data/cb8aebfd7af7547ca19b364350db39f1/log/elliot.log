@@ -1,0 +1,14 @@
+2022-11-07 17:05:36.845295: I C:\Users\anton\Documents\test\data\cb8aebfd7af7547ca19b364350db39f1\train_dataset.tsv - Loaded
+2022-11-07 17:05:36.854305: I Test Fold 0
+2022-11-07 17:05:38.048113: I Statistics	Users:	1398	Items:	2476	Transactions:	13515	Sparsity:	0.9960955646307557
+2022-11-07 17:05:43.488546: I Training begun for Random\n
+2022-11-07 17:05:43.488546: I Hyperparameters:
+2022-11-07 17:05:43.488546: I meta set to namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=None, save_weights='', validation_metric='Precision@10', validation_rate='10', verbose=None)
+2022-11-07 17:05:43.489534: I top_k set to 10
+2022-11-07 17:05:43.489534: I save_weights set to 
+2022-11-07 17:05:43.489534: I validation_metric set to Precision@10
+2022-11-07 17:05:43.514468: I validation_rate set to 10
+2022-11-07 17:05:43.514468: I hyper_opt_alg set to tpe
+2022-11-07 17:05:43.514468: I hyper_max_evals set to 10
+2022-11-07 17:05:43.515465: I Exploration: Test Fold exploration number 1
+2022-11-07 17:05:43.515465: I Exploration: Train-Validation Fold exploration number 1

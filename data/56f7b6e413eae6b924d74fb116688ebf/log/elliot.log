@@ -1,0 +1,41 @@
+2022-11-07 19:59:10.358703: I C:\Users\anton\Documents\test\data\56f7b6e413eae6b924d74fb116688ebf\train_dataset.tsv - Loaded
+2022-11-07 19:59:10.367681: I Test Fold 0
+2022-11-07 19:59:10.855412: I Statistics	Users:	1398	Items:	2476	Transactions:	13515	Sparsity:	0.9960955646307557
+2022-11-07 19:59:13.605266: I Training begun for Random\n
+2022-11-07 19:59:13.605266: I Hyperparameters:
+2022-11-07 19:59:13.605266: I meta set to namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False)
+2022-11-07 19:59:13.607261: I top_k set to 10
+2022-11-07 19:59:13.607261: I save_weights set to true
+2022-11-07 19:59:13.607261: I validation_metric set to Precision@10
+2022-11-07 19:59:13.608258: I validation_rate set to 1
+2022-11-07 19:59:13.608258: I hyper_opt_alg set to tpe
+2022-11-07 19:59:13.608258: I hyper_max_evals set to 10
+2022-11-07 19:59:13.608258: I Exploration: Test Fold exploration number 1
+2022-11-07 19:59:13.609256: I Exploration: Train-Validation Fold exploration number 1
+2022-11-07 19:59:13.698018: I 
+2022-11-07 19:59:13.699016: I Test Evaluation results
+2022-11-07 19:59:13.699016: I Cut-off: 10
+2022-11-07 19:59:13.699016: I Eval Time: 0.0069806575775146484
+2022-11-07 19:59:13.699016: I Results
+2022-11-07 19:59:13.699016: I Precision	0.00086
+2022-11-07 19:59:13.727939: I Training ended for Random
+2022-11-07 19:59:13.727939: I Loss:\t-0.0008583690987124463
+2022-11-07 19:59:13.727939: I Best Model params:\t{'meta': namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False), 'top_k': '10', 'save_weights': 'true', 'validation_metric': 'Precision@10', 'validation_rate': '1', 'hyper_opt_alg': 'tpe', 'hyper_max_evals': '10', 'name': 'Random_seed=42'}
+2022-11-07 19:59:13.727939: I Best Model results:\t{10: {'Precision': 0.0008583690987124463}}
+2022-11-07 19:59:13.728936: I Hyperparameters:
+2022-11-07 19:59:13.729933: I meta set to namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False)
+2022-11-07 19:59:13.729933: I top_k set to 10
+2022-11-07 19:59:13.729933: I save_weights set to true
+2022-11-07 19:59:13.730942: I validation_metric set to Precision@10
+2022-11-07 19:59:13.730942: I validation_rate set to 1
+2022-11-07 19:59:13.730942: I hyper_opt_alg set to tpe
+2022-11-07 19:59:13.731928: I hyper_max_evals set to 10
+2022-11-07 19:59:13.731928: I name set to Random_seed=42
+2022-11-07 19:59:13.731928: I Exploration: Test Fold exploration number 1
+2022-11-07 19:59:13.731928: I Exploration: Train-Validation Fold exploration number 1
+2022-11-07 19:59:13.800744: I 
+2022-11-07 19:59:13.800744: I Test Evaluation results
+2022-11-07 19:59:13.800744: I Cut-off: 10
+2022-11-07 19:59:13.800744: I Eval Time: 0.008976459503173828
+2022-11-07 19:59:13.800744: I Results
+2022-11-07 19:59:13.801742: I Precision	0.00086
