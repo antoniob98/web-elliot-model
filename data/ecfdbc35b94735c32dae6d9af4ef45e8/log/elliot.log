@@ -1,0 +1,43 @@
+2022-11-16 18:06:22.496270: I C:\Users\anton\Documents\test\data\ecfdbc35b94735c32dae6d9af4ef45e8\train_dataset.tsv - Loaded
+2022-11-16 18:06:22.505246: I Test Fold 0
+2022-11-16 18:06:23.111138: I Statistics	Users:	1398	Items:	2476	Transactions:	13515	Sparsity:	0.9960955646307557
+2022-11-16 18:06:44.509356: I Training begun for MostPop\n
+2022-11-16 18:06:44.509356: I Hyperparameters:
+2022-11-16 18:06:44.509356: I meta set to namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False)
+2022-11-16 18:06:44.509356: I loading_rec_model set to Unpersonalized Recommenders
+2022-11-16 18:06:44.511350: I top_k set to 10
+2022-11-16 18:06:44.511350: I save_weights set to true
+2022-11-16 18:06:44.511350: I validation_metric set to Precision@10
+2022-11-16 18:06:44.511350: I validation_rate set to 1
+2022-11-16 18:06:44.511350: I hyper_opt_alg set to tpe
+2022-11-16 18:06:44.513380: I hyper_max_evals set to 10
+2022-11-16 18:06:44.513380: I Exploration: Test Fold exploration number 1
+2022-11-16 18:06:44.513380: I Exploration: Train-Validation Fold exploration number 1
+2022-11-16 18:06:44.531298: I 
+2022-11-16 18:06:44.531298: I Test Evaluation results
+2022-11-16 18:06:44.532333: I Cut-off: 10
+2022-11-16 18:06:44.532333: I Eval Time: 0.008944272994995117
+2022-11-16 18:06:44.532333: I Results
+2022-11-16 18:06:44.532333: I Precision	0.02718
+2022-11-16 18:06:44.563939: I Training ended for MostPop
+2022-11-16 18:06:44.563939: I Loss:\t-0.027181688125894134
+2022-11-16 18:06:44.563939: I Best Model params:\t{'meta': namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False), 'loading_rec_model': 'Unpersonalized Recommenders', 'top_k': '10', 'save_weights': 'true', 'validation_metric': 'Precision@10', 'validation_rate': '1', 'hyper_opt_alg': 'tpe', 'hyper_max_evals': '10', 'name': 'MostPop'}
+2022-11-16 18:06:44.563939: I Best Model results:\t{10: {'Precision': 0.027181688125894134}}
+2022-11-16 18:06:44.565944: I Hyperparameters:
+2022-11-16 18:06:44.565944: I meta set to namespace(hyper_max_evals='10', hyper_opt_alg='tpe', save_recs=True, save_weights=True, validation_metric='Precision@10', validation_rate=1, verbose=False)
+2022-11-16 18:06:44.567957: I loading_rec_model set to Unpersonalized Recommenders
+2022-11-16 18:06:44.567957: I top_k set to 10
+2022-11-16 18:06:44.567957: I save_weights set to true
+2022-11-16 18:06:44.580894: I validation_metric set to Precision@10
+2022-11-16 18:06:44.583929: I validation_rate set to 1
+2022-11-16 18:06:44.583929: I hyper_opt_alg set to tpe
+2022-11-16 18:06:44.583929: I hyper_max_evals set to 10
+2022-11-16 18:06:44.584892: I name set to MostPop
+2022-11-16 18:06:44.584892: I Exploration: Test Fold exploration number 1
+2022-11-16 18:06:44.584892: I Exploration: Train-Validation Fold exploration number 1
+2022-11-16 18:06:44.584892: I 
+2022-11-16 18:06:44.584892: I Test Evaluation results
+2022-11-16 18:06:44.585881: I Cut-off: 10
+2022-11-16 18:06:44.585881: I Eval Time: 0.007008790969848633
+2022-11-16 18:06:44.585881: I Results
+2022-11-16 18:06:44.585881: I Precision	0.02718

@@ -1,0 +1,14 @@
+2022-11-16 18:10:22.269846: I C:\Users\anton\Documents\test\data\3fdf96efc548b8c16df8d60b4ac14c43\test_dataset.tsv - Loaded
+2022-11-16 18:10:22.797046: I Test Fold 0
+2022-11-16 18:10:25.397445: I Statistics	Users:	1398	Items:	2476	Transactions:	13515	Sparsity:	0.9960955646307557
+2022-11-16 18:10:26.068671: I Hyperparameters:
+2022-11-16 18:10:26.069668: I path set to data/3fdf96efc548b8c16df8d60b4ac14c43/recsdataset.tsv
+2022-11-16 18:10:26.069668: I meta set to namespace()
+2022-11-16 18:10:26.070664: I Exploration: Test Fold exploration number 1
+2022-11-16 18:10:26.070664: I Exploration: Train-Validation Fold exploration number 1
+2022-11-16 18:10:33.335065: I 
+2022-11-16 18:10:33.336119: I Test Evaluation results
+2022-11-16 18:10:33.359001: I Cut-off: 5
+2022-11-16 18:10:33.359998: I Eval Time: 0.006980419158935547
+2022-11-16 18:10:33.359998: I Results
+2022-11-16 18:10:33.359998: I Precision	0.03662

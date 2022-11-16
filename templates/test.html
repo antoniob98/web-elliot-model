@@ -13,10 +13,10 @@
             splitting strategies</p-->
         </div>
     </div>
-    <div class="row" id="model">
+    <div class="row">
         <div class="col-12">
 
-                <div class="row p-2">
+                <!--div class="row p-2">
                     <div class="col-12">
                         <div class="form-group p-3 border rounded-3">
                             <label for="loading_rec_model"><h2>Select Recommendation Models</h2></label>
@@ -28,7 +28,7 @@
                             </select>
                         </div>
                     </div>
-                </div>
+                </div-->
 
             <form action="/api/v1/recommendationmodel" method="POST" enctype="multipart/form-data" id="form_data" name="form_data"
                   class="main-form needs-validation">
@@ -41,8 +41,8 @@
                         </div>
                     </div>
                 </div-->
-
-                <!--div class="row p-2">
+                <div id="model1">
+                <div class="row p-2">
                     <div class="col-12">
                         <div class="form-group p-3 border rounded-3">
                             <label for="loading_rec_model"><h2>Select Recommendation Models</h2></label>
@@ -51,14 +51,14 @@
                                 {% for data1 in  data %}
                                   <option value='{{data1.id}}'>{{data1.id}}</option>
                                 {% endfor %}
-                                <option disabled selected value="null">--- select one ---</option>
+                                <!--option disabled selected value="null">--- select one ---</option>
                                 <option value="Unpersonalized Recommenders">Unpersonalized Recommenders</option>
                                 <option value="Algebric">Algebric</option>
-                                <option value="Autoencoders">Autoencoders</option>
+                                <option value="Autoencoders">Autoencoders</option-->
                             </select>
                         </div>
                     </div>
-                </div-->
+                </div>
 
                 <div class="row p-2">
                     <div class="col-12">
@@ -151,14 +151,16 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
                 <div class="col-auto p-2 text-end">
-                    <button type="button" class="btn btn-light mb-3 me-2" id="addmodel">+ Add Model</button>
+
                     <button type="submit" class="btn btn-primary mb-3">Confirm</button>
                 </div>
             </form>
         </div>
     </div>
+    <button type="button" class="btn btn-light mb-3 me-2" id="addmodel">+ Add Model</button>
 </div>
 
     <div class="toast-container position-fixed bottom-0 end-0  p-3">
@@ -229,7 +231,17 @@
 <script>
 $(document).ready(function(){
   $("#addmodel").click(function(){
-    $("#model").clone().appendTo("form");
+    // get the last DIV which ID starts with ^= "model"
+    var $div = $('div[id^="model"]:last');
+    console.log($div);
+    //console.log($("#model1"));
+    // Read the Number from that DIV's ID and increment that number by 1
+    var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+    console.log(num);
+    // Clone it and assign the new ID (i.e: from num 4 to ID "model4")
+    var $model = $div.clone().prop('id', 'model'+num ).insertAfter($("#model1"));
+    console.log($model);
+    //$("#model1").clone().appendTo("form");
   });
 });
 </script>
